@@ -10,14 +10,14 @@ var url = require('url');
 var HttpProxyAgent = require('http-proxy-agent');
 var HttpsProxyAgent = require('https-proxy-agent');
 
-var proxyModule = function (proxyConfiguration) {
+var proxyModule = function () {
 
-  var configuration = proxyConfiguration || {
-      whitelist: undefined,
-      blacklist: undefined,
-      http_proxy: undefined,
-      https_proxy: undefined
-    };
+  var configuration = {
+    whitelist: undefined,
+    blacklist: undefined,
+    http_proxy: undefined,
+    https_proxy: undefined
+  };
 
   var _httpAgent;
   var _httpsAgent;
@@ -44,7 +44,8 @@ var proxyModule = function (proxyConfiguration) {
       undefined;
   }
 
-  function install() {
+  function install(configuration) {
+    config(configuration);
     setupHttpProxy();
     setupHttpsProxy();
   }
@@ -69,7 +70,8 @@ var proxyModule = function (proxyConfiguration) {
   }
 
   function config(proxyConfiguration) {
-    configuration = proxyConfiguration;
+    configuration = proxyConfiguration || {};
+    return configuration;
   }
 
 
@@ -153,4 +155,4 @@ var proxyModule = function (proxyConfiguration) {
 
 };
 
-module.exports = proxyModule;
+module.exports = proxyModule();
