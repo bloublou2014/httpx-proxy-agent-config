@@ -6,7 +6,7 @@ A Node proxy definition for http/https with proxy and blacklist/whitelist config
 
 
 ```sh
-$ npm install httpx-proxy-agent-config
+$ npm install bloublou2014/httpx-proxy-agent-config
 ```
 
 ### Quick Start
