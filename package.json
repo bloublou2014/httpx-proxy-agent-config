@@ -33,7 +33,8 @@
   "homepage": "https://github.com/bloublou2014/httpx-proxy-agent-config#readme",
   "dependencies": {
     "http-proxy-agent": "^1.0.0",
-    "https-proxy-agent": "^1.0.0"
+    "https-proxy-agent": "^1.0.0",
+    "rc": "^1.1.6"
   },
   "devDependencies": {
     "benchmark": "^2.1.1",

@@ -7,6 +7,8 @@ var https = require('https');
 var util = require('util');
 var url = require('url');
 
+const conf = require('rc')('npm');
+
 var HttpProxyAgent = require('http-proxy-agent');
 var HttpsProxyAgent = require('https-proxy-agent');
 
