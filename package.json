@@ -1,0 +1,43 @@
+{
+  "name": "httpx-proxy-agent-config",
+  "version": "0.0.1",
+  "description": "A Node proxy definition for http/https with proxy and blacklist/whitelist configuration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --check-leaks ./tests/**.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloublou2014/httpx-proxy-agent-config.git"
+  },
+  "keywords": [
+    "http",
+    "https",
+    "io",
+    "proxy",
+    "http_proxy",
+    "https_proxy",
+    "node",
+    "whitelist",
+    "blacklist",
+    "oauth",
+    "passportjs",
+    "google-oauth-2"
+  ],
+  "author": "BlouBlou <bloublou2014@gmail.com>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bloublou2014/httpx-proxy-agent-config/issues"
+  },
+  "homepage": "https://github.com/bloublou2014/httpx-proxy-agent-config#readme",
+  "dependencies": {
+    "http-proxy-agent": "^1.0.0",
+    "https-proxy-agent": "^1.0.0"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.1",
+    "mocha": "^3.1.0",
+    "should": "^11.1.0"
+  }
+}
