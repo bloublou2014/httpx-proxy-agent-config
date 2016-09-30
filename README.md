@@ -18,7 +18,7 @@ proxy.install({
  http_proxy: 'http://yourProxy:3128',
  https_proxy: 'http://yourHttpsProxy:3218',
  // example for passportjs Google OAuth2 + Google+
- whitelist: ['accounts.google.com', '173.194.66.95', '74.125.192.95', '209.85.201.95', 'www.googleapis.com']
+ whitelist: ['www.google.com','accounts.google.com', '173.194.66.95', '74.125.192.95', '209.85.201.95', 'www.googleapis.com']
 });
 
 // try to access a page via http request :
