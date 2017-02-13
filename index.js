@@ -1,32 +1,32 @@
 /**
  * HTTP/HTTPS configuration Node Proxy
  */
-var http = require('http');
-var https = require('https');
+const http = require('http');
+const https = require('https');
 
-var util = require('util');
-var url = require('url');
+const util = require('util');
+const url = require('url');
 
 const conf = require('rc')('npm');
 
-var HttpProxyAgent = require('http-proxy-agent');
-var HttpsProxyAgent = require('https-proxy-agent');
+let HttpProxyAgent = require('http-proxy-agent');
+let HttpsProxyAgent = require('https-proxy-agent');
 
-var proxyModule = function () {
+let proxyModule = function () {
 
-  var configuration = {
+  let configuration = {
     whitelist: undefined,
     blacklist: undefined,
     http_proxy: undefined,
     https_proxy: undefined
   };
 
-  var _httpAgent;
-  var _httpsAgent;
-  var _httpRequest;
-  var _httpsRequest;
-  var httpProxyAgent;
-  var httpsProxyAgent;
+  let _httpAgent;
+  let _httpsAgent;
+  let _httpRequest;
+  let _httpsRequest;
+  let httpProxyAgent;
+  let httpsProxyAgent;
 
   function getHttpProxy() {
     return configuration.http_proxy ||
@@ -78,7 +78,7 @@ var proxyModule = function () {
 
 
   function setupHttpProxy() {
-    var httpProxy = getHttpProxy();
+    let httpProxy = getHttpProxy();
     if (httpProxy) {
       httpProxyAgent = new HttpProxyAgent(httpProxy);
       if (httpProxyAgent) {
@@ -93,7 +93,7 @@ var proxyModule = function () {
   }
 
   function setupHttpsProxy() {
-    var httpsProxy = getHttpsProxy();
+    let httpsProxy = getHttpsProxy();
     if (httpsProxy) {
       httpsProxyAgent = new HttpsProxyAgent(httpsProxy);
       if (httpsProxyAgent) {
@@ -108,7 +108,7 @@ var proxyModule = function () {
   }
 
   function checkList(options) {
-    var host = options.host || options.hostname;
+    let host = options.host || options.hostname;
 
     if (host && configuration.whitelist) {
       return (configuration.whitelist.indexOf(host) > -1);
@@ -150,7 +150,7 @@ var proxyModule = function () {
   }
 
   return {
-    install : install,
+    install: install,
     uninstall: uninstall,
     config: config
   }
