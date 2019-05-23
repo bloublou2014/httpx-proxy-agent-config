@@ -1,6 +1,6 @@
 {
   "name": "httpx-proxy-agent-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Node proxy definition for http/https with proxy and blacklist/whitelist configuration.",
   "main": "index.js",
   "scripts": {
