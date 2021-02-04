@@ -6,9 +6,6 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha --check-leaks ./tests/**.js"
   },
-  "engines": {
-    "node": ">=7.4.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bloublou2014/httpx-proxy-agent-config.git"
